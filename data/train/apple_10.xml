@@ -1,0 +1,20 @@
+<annotation>
+	<filename>apple_10.jpg</filename>
+	<path>/Users/phoebezhouhuixin/Downloads/testproj/train/apple_10.jpg</path>
+	<size>
+		<width>1500</width>
+		<height>1500</height>
+	</size>
+	<object>
+		<name>apple</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>56</xmin>
+			<ymin>99</ymin>
+			<xmax>1413</xmax>
+			<ymax>1419</ymax>
+		</bndbox>
+	</object>
+</annotation>

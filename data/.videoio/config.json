@@ -1,0 +1,1 @@
+{"command":"predict","project_type":"object-detection","project_dir":"/Users/phoebezhouhuixin/Downloads/testproj","model_name":"base:yolo-darknet","input_dir":"/Users/phoebezhouhuixin/Downloads/testproj/validate","output_dir":"/Users/phoebezhouhuixin/Downloads/testproj/predict/output","threshold":null,"use_gpu":false,"auto_slice":false}

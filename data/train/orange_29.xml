@@ -1,0 +1,32 @@
+<annotation>
+	<filename>orange_29.jpg</filename>
+	<path>/Users/phoebezhouhuixin/Downloads/testproj/train/orange_29.jpg</path>
+	<size>
+		<width>960</width>
+		<height>625</height>
+	</size>
+	<object>
+		<name>orange</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>76</xmin>
+			<ymin>69</ymin>
+			<xmax>412</xmax>
+			<ymax>439</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>orange</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>430</xmin>
+			<ymin>58</ymin>
+			<xmax>759</xmax>
+			<ymax>380</ymax>
+		</bndbox>
+	</object>
+</annotation>
