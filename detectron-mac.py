@@ -3,13 +3,28 @@ import sys
 print(f"Installing into {os.getcwd()}")  # may not be the same as sys.path[0]
 
 # Install pytorch and torchvision; install pycocotools
-os.system("pip install -U torch==1.5 torchvision==0.6 -f https://download.pytorch.org/whl/cu101/torch_stable.html ; \
-pip install cython pyyaml==5.1; \
-pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'")
+import subprocess
+def run_win_cmd(cmd):
+    result = []
+    process = subprocess.Popen(cmd,
+                               shell=True,
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE)
+    for line in process.stdout:
+        result.append(line)
+    errcode = process.returncode
+    for line in result:
+        print(line)
+    if errcode is not None:
+        raise Exception('cmd %s failed, see above for details', cmd)
+
+run_win_cmd("pip install -U torch==1.5 torchvision==0.6 -f https://download.pytorch.org/whl/cu101/torch_stable.html")
+run_win_cmd("pip install cython pyyaml==5.1")
+run_win_cmd("pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'")
 
 # Install detectron2
-# os.system("git clone https://github.com/facebookresearch/detectron2.git ;\
-# cd detectron2 && pip install -e .")
+run_win_cmd("git clone https://github.com/facebookresearch/detectron2.git")
+run_win_cmd("cd detectron2 && pip install -e .")
 
 import torch, torchvision
 print(torch.__version__, torch.cuda.is_available())
