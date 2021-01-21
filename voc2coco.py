@@ -9,10 +9,11 @@ import glob
 
 
 def get_label2id(labels_path: str) -> Dict[str, int]:
-    """id is 1 start"""
+    # ids must start from 1
     with open(labels_path, 'r') as f:
         labels_str = f.read().split()
     labels_ids = list(range(1, len(labels_str)+1))
+    # print(labels_ids)
     return dict(zip(labels_str, labels_ids))
 
 def get_image_info(annotation_root, extract_num_from_imgid=True):
